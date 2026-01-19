@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 小部件布局：使用FrameLayout作为根布局，支持背景图片和颜色切换 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+    
+    <!-- 背景层：用于显示背景颜色或图片 -->
+    <ImageView
+        android:id="@+id/widget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"/>
+    
+    <!-- 内容层：包含所有显示的文本和控件 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_gravity="center">
+        
+        <!-- 标题行：包含标题和刷新按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+            
+            <!-- 标题文本 -->
+            <TextView
+                android:id="@+id/widget_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="月经周期"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7D5260"
+                android:gravity="center"/>
+            
+            <!-- 刷新按钮 -->
+            <ImageButton
+                android:id="@+id/widget_refresh_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@null"
+                android:src="@android:drawable/ic_popup_sync"
+                android:tint="#7D5260"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+        
+        <!-- 当前阶段：突出显示 -->
+        <TextView
+            android:id="@+id/widget_phase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前阶段"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#7D5260"
+            android:layout_marginBottom="6dp"
+            android:singleLine="true"/>
+        
+        <!-- 距离信息：显示距离下次月经或排卵的天数 -->
+        <TextView
+            android:id="@+id/widget_distance_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="距离下次还有 X 天"
+            android:textSize="14sp"
+            android:textColor="#7D5260"
+            android:layout_marginBottom="6dp"
+            android:singleLine="true"/>
+        
+        <!-- 周期信息容器：显示下次月经和排卵日期 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <!-- 下次月经日期 -->
+            <TextView
+                android:id="@+id/widget_next_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下次: --/--"
+                android:textSize="13sp"
+                android:textColor="#7D5260"
+                android:layout_marginBottom="3dp"
+                android:singleLine="true"/>
+            
+            <!-- 排卵日期 -->
+            <TextView
+                android:id="@+id/widget_ovulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="排卵: --/--"
+                android:textSize="13sp"
+                android:textColor="#7D5260"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+</FrameLayout>
