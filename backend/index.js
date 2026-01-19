@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 // 内存存储 - 实际生产环境应使用数据库
 let locationData = {
   femaleLocation: null,
-  maleLocation: null
+  maleLocation: null,
+  encrypted: null
 };
 
 let messages = [];

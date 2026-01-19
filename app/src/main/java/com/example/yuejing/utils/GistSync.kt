@@ -22,8 +22,8 @@ class GistSync {
         .setLenient()
         .registerTypeAdapter(PartnerMessage::class.java, PartnerMessageTypeAdapter())
         .create()
-    // 使用自定义后端服务地址 - 实际部署时应替换为腾讯云服务器IP或域名
-    private val baseUrl = "http://localhost:3002/api"
+    // 使用腾讯云服务器地址
+    private val baseUrl = "http://43.167.189.166:3002/api"
     
     // 自定义TypeAdapter，处理旧消息中没有senderGender字段的情况
     private inner class PartnerMessageTypeAdapter : TypeAdapter<PartnerMessage>() {
