@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">爱的日记</string>
+    <string name="app_title">爱的日记</string>
+    <string name="welcome">欢迎使用</string>
+    <string name="enter_calendar">进入日历</string>
+    <string name="view_records">查看记录</string>
+    <string name="settings">设置</string>
+    <string name="charts">图表统计</string>
+    <string name="reminders">提醒设置</string>
+    <string name="statistics">数据统计</string>
+    <string name="previous_month">上一月</string>
+    <string name="next_month">下一月</string>
+    <string name="today">今天</string>
+    <string name="period">经期</string>
+    <string name="ovulation">排卵期</string>
+    <string name="fertile">易孕期</string>
+    <string name="add_record">添加记录</string>
+    <string name="edit_record">编辑记录</string>
+    <string name="delete_record">删除记录</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="mood">心情</string>
+    <string name="symptoms">症状</string>
+    <string name="intimacy">亲密</string>
+    <string name="note">备注</string>
+    <string name="period_reminder">经期提醒</string>
+    <string name="ovulation_reminder">排卵期提醒</string>
+    <string name="fertile_reminder">易孕期提醒</string>
+    <string name="enable_reminders">启用提醒</string>
+    <string name="reminder_time">提醒时间</string>
+    <string name="widget_description">快速查看月经周期信息</string>
+</resources>
