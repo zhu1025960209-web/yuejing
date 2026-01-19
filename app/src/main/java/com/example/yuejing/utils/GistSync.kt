@@ -14,6 +14,7 @@ import com.example.yuejing.data.model.PartnerLocationState
 import com.example.yuejing.data.model.PeriodRecord
 import com.example.yuejing.data.model.PartnerMessage
 import com.example.yuejing.data.model.PartnerSharingState
+import com.example.yuejing.data.model.SharingSettings
 
 class GistSync {
     private val client = OkHttpClient()
@@ -22,7 +23,7 @@ class GistSync {
         .registerTypeAdapter(PartnerMessage::class.java, PartnerMessageTypeAdapter())
         .create()
     // 使用自定义后端服务地址 - 实际部署时应替换为腾讯云服务器IP或域名
-    private val baseUrl = "http://localhost:3000/api"
+    private val baseUrl = "http://localhost:3002/api"
     
     // 自定义TypeAdapter，处理旧消息中没有senderGender字段的情况
     private inner class PartnerMessageTypeAdapter : TypeAdapter<PartnerMessage>() {
